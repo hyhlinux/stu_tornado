@@ -22,18 +22,6 @@ class MainHandler(RequestHandler):
 
     def post(self, *args, **kwargs):
         self.write('post')
-        # subject = self.get_query_argument('subject')  # 只能获取header中. 不能获取body
-        # subject = self.get_argument('a')
-        # self.write('subject:', subject)
-        # app_type = self.request.headers.get('Content-Type').startswith('application/json')
-        # if app_type:
-        #     json_str = self.request.body
-        #     json_data = json.loads(json_str)
-        # else:
-        #     json_data = {}
-        # print('json:', json_data)
-        # self.write(str(json_data))
-        # file
 
 app = tornado.web.Application(
     [

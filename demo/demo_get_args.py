@@ -1,10 +1,13 @@
 # coding:utf-8
 import tornado.ioloop
 import tornado.httpserver
-# import tornado.options
 from tornado.web import RequestHandler, url
 from tornado.options import options
 import json
+
+# 前两类方法的整合
+# get_argument(name, default=_ARG_DEFAULT, strip=True)
+# get_arguments(name, strip=True)
 
 options.define(
     "port",
@@ -17,23 +20,17 @@ options.define(
 class MainHandler(RequestHandler):
 
     def get(self):
+        self.write('get')
         subject = self.get_argument('subject')
         self.write("hello world:" + subject)
 
-    def post(self, *args, **kwargs):
-        self.write('post')
-        # subject = self.get_query_argument('subject')  # 只能获取header中. 不能获取body
-        # subject = self.get_argument('a')
-        # self.write('subject:', subject)
-        # app_type = self.request.headers.get('Content-Type').startswith('application/json')
-        # if app_type:
-        #     json_str = self.request.body
-        #     json_data = json.loads(json_str)
-        # else:
-        #     json_data = {}
-        # print('json:', json_data)
-        # self.write(str(json_data))
-        # file
+    def post(self):
+        self.write('post\n')
+        subject = self.get_argument('subject')
+        subject_list = self.get_arguments('subject')
+        self.write('\nsubject:' + subject)
+        self.write('\nsubjects:' + str(subject_list))
+
 
 app = tornado.web.Application(
     [

@@ -1,13 +1,17 @@
+# coding:utf-8
 import tornado.ioloop
 import tornado.httpserver
 # import tornado.options
 from tornado.web import RequestHandler, url
 from tornado.options import options
 
+# 对比一下两种方式的响应头header中Content - Type字段，
+# 自己手动序列化时为Content-Type:text/html charset = UTF-8，
+# 而采用write方法时为Content-Type:application/json charset =UTF-8。
 
 options.define(
     "port",
-    default=9001,
+    default=8000,
     type=int,
     help=("port for server"),
 )
@@ -17,23 +21,20 @@ class MainHandler(RequestHandler):
 
     def get(self):
         self.write("hello world")
+        stu = {
+            'name': 'huoyinghui',
+            'age': 10,
+            'sex': 1
+        }
 
+        import json
+        stu = json.dumps(stu)
+        self.write(stu)
 
-class SubjectHandler(RequestHandler):
-
-    def initialize(self, subject):
-        self.subject = subject
-        print('subject:', subject)
-
-    def get(self):
-        self.write('hi ' + self.subject)
-        self.write("<a>" + self.reverse_url(self.subject) + "</a>")
 
 app = tornado.web.Application(
     [
         (r"/", MainHandler),
-        url(r"/python", SubjectHandler, {'subject': 'python'}, name='python'),
-        url(r"/c", SubjectHandler, {'subject': 'c'}, name='c'),
     ],
     debug=True,
 )
