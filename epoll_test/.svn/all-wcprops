@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 22
+/svn/!svn/ver/21/trunk
+END
+utils.h
+K 25
+svn:wc:ra_dav:version-url
+V 30
+/svn/!svn/ver/20/trunk/utils.h
+END
+server.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 33
+/svn/!svn/ver/21/trunk/server.cpp
+END
+tester.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 32
+/svn/!svn/ver/5/trunk/tester.cpp
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 30
+/svn/!svn/ver/4/trunk/Makefile
+END
+client.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 33
+/svn/!svn/ver/20/trunk/client.cpp
+END
+local.h
+K 25
+svn:wc:ra_dav:version-url
+V 29
+/svn/!svn/ver/5/trunk/local.h
+END

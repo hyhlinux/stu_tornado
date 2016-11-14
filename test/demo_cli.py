@@ -19,5 +19,5 @@ def synchronous_fetch_callback(url, callback):
     return response.body
 
 if __name__ == "__main__":
-    html_body = synchronous_fetch('http://127.0.0.1:8008/')
+    html_body = synchronous_fetch('http://127.0.0.1:9000/')
     print(html_body)
