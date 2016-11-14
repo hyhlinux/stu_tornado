@@ -28,9 +28,10 @@ class MainHandler(RequestHandler):
         }
 
         import json
-        stu = json.dumps(stu)
-        self.write(stu)
-        self.set_header('con')
+        # stu = json.dumps(stu)
+        chunk = json.dumps(stu)
+        self.set_header("Content-Type", "application/json; charset=UTF-8")
+        self.write(chunk)
 
 
 app = tornado.web.Application(

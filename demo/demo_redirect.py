@@ -1,13 +1,9 @@
 # coding:utf-8
 import tornado.ioloop
 import tornado.httpserver
-# import tornado.options
+import json
 from tornado.web import RequestHandler, url
 from tornado.options import options
-
-# 对比一下两种方式的响应头header中Content - Type字段，
-# 自己手动序列化时为Content-Type:text/html charset = UTF-8，
-# 而采用write方法时为Content-Type:application/json charset =UTF-8。
 
 options.define(
     "port",
@@ -17,25 +13,26 @@ options.define(
 )
 
 
-class MainHandler(RequestHandler):
+class IndexHandler(RequestHandler):
+    """对应/"""
 
     def get(self):
-        self.write("hello world")
-        stu = {
-            'name': 'huoyinghui',
-            'age': 10,
-            'sex': 1
-        }
+        self.write("主页")
 
-        import json
-        stu = json.dumps(stu)
-        self.write(stu)
-        self.set_header('con')
 
+class LoginHandler(RequestHandler):
+    """对应/login"""
+
+    def get(self):
+        self.write('<form method="post"><input type="submit" value="登陆"></form>')
+
+    def post(self):
+        self.redirect("/")
 
 app = tornado.web.Application(
     [
-        (r"/", MainHandler),
+        (r"/", IndexHandler),
+        (r"/login", LoginHandler),
     ],
     debug=True,
 )
