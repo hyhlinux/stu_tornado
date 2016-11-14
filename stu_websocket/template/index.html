@@ -10,9 +10,12 @@
         <textarea id="msg"></textarea>
         <a href="javascript:;" onclick="sendMsg()">发送</a>
     </div>
+    <!--
     <script src="{{static_url('js/jquery.min.js')}}"></script>
+    !-->
+    <script src="/static/js/jquery.min.js"></script>
     <script type="text/javascript">
-        var ws = new WebSocket("ws://127.0.0.1:8000/chat");
+        var ws = new WebSocket("ws://192.168.1.128:8000/chat");
         ws.onmessage = function(e) {
             $("#contents").append("<p>" + e.data + "</p>");
         }

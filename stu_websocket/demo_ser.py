@@ -25,19 +25,20 @@ class ChatHandler(WebSocketHandler):
     users = set()  # 用来存放在线用户的容器
 
     def open(self):
-        print('hhhh', self.users)
+        print('open:', self.users)
         self.users.add(self)  # 建立连接后添加用户到容器中
         for u in self.users:  # 向已在线用户发送消息
             u.write_message(u"[%s]-[%s]-进入聊天室" % (self.request.remote_ip,
                                                   datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")))
 
     def on_message(self, message):
-        print('message:', message)
+        print('on_message:', message)
         for u in self.users:  # 向在线用户广播消息
             u.write_message(u"[%s]-[%s]-说：%s" % (self.request.remote_ip,
                                                  datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"), message))
 
     def on_close(self):
+        print('on_close:')
         self.users.remove(self)  # 用户关闭连接后从容器中移除用户
         for u in self.users:
             u.write_message(u"[%s]-[%s]-离开聊天室" % (self.request.remote_ip,
@@ -57,5 +58,5 @@ if __name__ == '__main__':
         debug=True
     )
     http_server = tornado.httpserver.HTTPServer(app)
-    http_server.listen(options.port)
+    http_server.listen(options.port, '0.0.0.0')
     tornado.ioloop.IOLoop.current().start()
