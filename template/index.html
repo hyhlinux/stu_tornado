@@ -1,23 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>index</title>
-</head>
-<body>
-    index:
-    <li class="house-item">
-    <a href=""><img src="/static/images/xx.jpg"></a>
-    <div class="house-desc">
-        <div class="landlord-pic"><img src="/static/images/xx.jpg"></div>
-        <div class="house-price">￥<span>{{price}}</span>/晚</div>
-        <div class="house-intro">
-            <span class="house-title">{{title}}</span>
-            <em>{{score}}</em>
-        </div>
-    </div>
+{% extends "base.html" %}
+{% block title %}
+   hello index 
+{% end %}
 
-</ul>
-</li>
-</body>
-</html>
+{% block body %}
+<a href="/all">body</a>
+{% end %}

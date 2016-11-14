@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+  	{% block title %}
+  	index	
+  	{% end %}
+  </title>
+  <link rel="stylesheet" type="text/css" href="{{static_url('css/bootstrap.min.css')}}">
+  <script type="text/javascript" src="{{static_url('js/jquery.min.js')}}"></script>
+  <script type="text/javascript" src="{{static_url('js/bootstrap.min.js')}}"></script>
+  <link rel="stylesheet" type="text/css" href="{{static_url('css/nav_index.css')}}">
+  <script type="text/javascript">
+  	{% block script %}
+      		
+  	{% end %}
+  </script>
+</head>
+<body>
+{% block nav_top %}
+	nav_top	
+{% end %}
+
+{% block nav_center %}
+
+{% end%}
+
+{% block nav_bottom %}
+	nav_bottom	
+{% end %}
+</body>
+</html>

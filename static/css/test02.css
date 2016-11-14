@@ -1,0 +1,42 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+ul,
+dl,
+dd,
+p {
+  margin: 0;
+  padding: 0;
+}
+img {
+  border: none;
+}
+.navbar-inverse {
+  background-color: #7c8c3c;
+  border-color: #080808;
+}
+.list {
+  list-style: none;
+  width: 400px;
+}
+.list li {
+  height: 30px;
+  line-height: 30px;
+  background-color: pink;
+  margin-bottom: 3px;
+  padding: 0 10px;
+}
+.list a {
+  float: left;
+  text-decoration: none;
+  color: #333;
+}
+.list a:hover {
+  color: gold;
+}
+.list span {
+  float: right;
+}

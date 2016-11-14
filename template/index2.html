@@ -7,24 +7,24 @@
 <body>
    house: {{len(houses)}}
    <hr>
-    <ul class="house-list">
+   <ul class="house-list">
     {% if len(houses) > 0 %}
-        {% for house in houses %}
-        <li class="house-item">
-            <a href=""><img src="/static/images/home01.jpg"></a>
-            <div class="house-desc">
-                <div class="landlord-pic"><img src="/static/images/landlord01.jpg"></div>
-                <div class="house-price">￥<span>{{house["price"]}}</span>/晚</div>
-                <div class="house-intro">
-                    <span class="house-title">{{house["title"]}}</span>
-                    <em>整套出租 - {{house["score"]}}分/{{house["comments"]}}点评 - {{house["position"]}}</em>
-                </div>
+    {% for house in houses %}
+    <li class="house-item">
+        <a href=""><img src="/static/images/home01.jpg"></a>
+        <div class="house-desc">
+            <div class="landlord-pic"><img src="/static/images/landlord01.jpg"></div>
+            <div class="house-price">￥<span>{{house["price"]}}</span>/晚</div>
+            <div class="house-intro">
+                <span class="house-title">{{house["title"]}}</span>
+                <em>整套出租 - {{house["score"]}}分/{{house["comments"]}}点评 - {{house["position"]}}</em>
             </div>
-        </li>
-        <hr>
-        {% end %}
+        </div>
+    </li>
+    <hr>
+    {% end %}
     {% else %}
-        对不起，暂时没有房源。
+    对不起，暂时没有房源。
     {% end %}
 </ul>
 </li>

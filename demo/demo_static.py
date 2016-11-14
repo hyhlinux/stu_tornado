@@ -6,7 +6,7 @@ import tornado.httpserver
 import tornado.options
 import os
 
-from tornado.web import RequestHandler
+from tornado.web import RequestHandler, url
 from tornado.options import define, options
 
 define("port", default=8000, type=int)
@@ -65,14 +65,15 @@ class IndexAllHandler(RequestHandler):
                 "comments": 6,
                 "position": "北京市丰台区六里桥地铁"
             }]
-        self.render("index2.html", houses=houses)
+        self.render("all.html", houses=houses)
 
 if __name__ == '__main__':
     tornado.options.parse_command_line()
     tornado.options.parse_command_line()
     app = tornado.web.Application([
         (r"/", IndexHandler),
-        (r"/all", IndexAllHandler),
+        # (r"/all", IndexAllHandler),
+        url(r"/all", IndexAllHandler, name='all'),
     ],
         static_path=os.path.join(os.path.dirname(__file__), "../static"),
         template_path=os.path.join(os.path.dirname(__file__), "../template"),

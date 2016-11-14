@@ -1,0 +1,65 @@
+
+//变量
+@w:100px;
+
+.border{
+	border:1px solid #ddd;
+}
+
+//函数(混合)
+.border2(@w, @c){
+	border: @w solid  @c;
+
+}
+
+//设置初始值
+.border3(@w:1px, @c:gold){
+	border: @w solid  @c;
+}
+
+.box{
+	width: @w;
+	height: @w;
+	.border;
+}
+
+.box2{
+	width: @w;
+	height: @w;
+	.border2(2px, gold);
+}
+.box3{
+	.border3();
+}
+
+
+//匹配模式
+//会被编译.
+.pf{
+	position: fixed;
+}
+//相当于函数， 不会被编译到css
+.p(f){
+	position: fixed;
+}
+
+.p(r){
+	position: relative;
+}
+
+.box4 {
+	.pf;
+}
+
+.box5 {
+	.p(f);
+}
+
+//5.运算
+.box6{
+	width: @w+20px;
+	height: @w+10px;
+}
+
+
+
