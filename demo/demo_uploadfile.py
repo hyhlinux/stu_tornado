@@ -1,13 +1,14 @@
+# coding:utf-8
 import tornado.ioloop
 import tornado.httpserver
 # import tornado.options
 from tornado.web import RequestHandler, url
 from tornado.options import options
-
+import json
 
 options.define(
     "port",
-    default=9001,
+    default=8500,
     type=int,
     help=("port for server"),
 )
@@ -16,24 +17,24 @@ options.define(
 class MainHandler(RequestHandler):
 
     def get(self):
-        self.write("hello world")
+        subject = self.get_argument('subject')
+        self.write("hello world:" + subject)
 
-
-class SubjectHandler(RequestHandler):
-
-    def initialize(self, subject):
-        self.subject = subject
-        print('subject:', subject)
-
-    def get(self):
-        self.write('hi ' + self.subject)
-        self.write('<a></a>')
+    def post(self, *args, **kwargs):
+        self.write('post')
+        # file
+        upload_img_list = self.request.files.get('img')
+        print('upload_img_list:', upload_img_list)
+        if upload_img_list:
+            for upload_img in upload_img_list:
+                filename = upload_img['filename']
+                with open(filename, 'w') as f:
+                    data = upload_img['body']
+                    f.write(data)
 
 app = tornado.web.Application(
     [
         (r"/", MainHandler),
-        (r"/python", SubjectHandler, {'subject':'python'}),
-        (r"/c", SubjectHandler, {'subject':'c'}),
     ],
     debug=True,
 )
