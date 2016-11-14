@@ -13,7 +13,7 @@ application = tornado.web.Application([
 
 
 def main():
-    application.listen(9000)
+    application.listen(9000, '0.0.0.0')
     tornado.ioloop.IOLoop.instance().start()
 
 
