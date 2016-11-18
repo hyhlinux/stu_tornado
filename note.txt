@@ -1,0 +1,72 @@
+
+url
+cli-->ser 传参
+/index?k1=v1&k2=v2&k2=v3
+/subject/(python)
+body
+cookie
+header
+
+
+2.class RequestHandler(object):
+
+	1.get_query_argument  获取reqeust  header中的值
+
+    def get_query_argument(self, name, default=_ARG_DEFAULT, strip=True):
+d
+        return self._get_argument(name, default,
+                                  self.request.query_arguments, strip)
+
+         self.request.query_arguments: 数据来自http header
+
+    def _get_argument(self, name, default, source, strip=True):
+        args = self._get_arguments(name, source, strip=strip)
+        if not args:
+            if default is self._ARG_DEFAULT:  		#[]
+                raise MissingArgumentError(name)	#为什么用列表.
+            return default
+        return args[-1]	#默认返回最后一个.
+
+    def _get_arguments(self, name, source, strip=True):
+        values = []
+        for v in source.get(name, []):
+            v = self.decode_argument(v, name=name)
+            if isinstance(v, unicode_type):
+                # Get rid of any weird control chars (unless decoding gave
+                # us bytes, in which case leave it alone)
+                v = RequestHandler._remove_control_chars_regex.sub(" ", v)
+            if strip:
+                v = v.strip()
+            values.append(v)
+        return values
+
+ strip: 默认会截取参数中的空格.
+ 	  :false  当用户设置了 空白密码时.
+
+ {u'img': 
+ [
+ 	{
+ 	'body': 'from PIL import Image\nim = Image.open("1.jpg")\nim.rotate(45).show()\n\n\nsize = (100, 25)\n#\xe5\x88\x9b\xe5\xbb\xba\xe7\x94\xbb\xe9\x9d\xa2\xe5\xaf\xb9\xe8\xb1\xa1\n\ndef main():\n\tim = Image.new(\'RGB\', size, bgcolor)\n\n\nif __name__ == \'__main__\':\n\tmain()', 'content_type': u'text/plain', 
+ 	
+ 	'filename': u'yanzhen.py'
+ 	}
+ ]
+
+}
+======================
+In [5]: 'ss' + "火"
+Out[5]: 'ss\xe7\x81\xab'
+
+In [6]: 'ss %s'  %  "火"
+Out[6]: 'ss \xe7\x81\xab'
+
+In [7]: u'ss %s'  %  "火"
+---------------------------------------------------------------------------
+UnicodeDecodeError                        Traceback (most recent call last)
+<ipython-input-7-673420903d87> in <module>()
+----> 1 u'ss %s'  %  "火"
+
+UnicodeDecodeError: 'ascii' codec can't decode byte 0xe7 in position 0: ordinal not in range(128)
+
+In [8]: u'ss %s'  %  "火".decode('utf-8')
+Out[8]: u'ss \u706b'

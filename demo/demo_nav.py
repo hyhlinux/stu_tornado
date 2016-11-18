@@ -5,6 +5,7 @@ import tornado.ioloop
 import tornado.httpserver
 import tornado.options
 import os
+import hyh
 
 from tornado.web import RequestHandler, url
 from tornado.options import define, options
@@ -15,6 +16,7 @@ define("port", default=8000, type=int)
 class IndexHandler(RequestHandler):
 
     def get(self):
+        hyh.get_head_info()
         self.render("nav_index.html")
 
 
@@ -59,8 +61,9 @@ class IndexAllHandler(RequestHandler):
             }]
         self.render("all.html", houses=houses)
 
+
 if __name__ == '__main__':
-    tornado.options.parse_command_line()
+    # tornado.options.parse_command_line()
     tornado.options.parse_command_line()
     app = tornado.web.Application([
         (r"/", IndexHandler),

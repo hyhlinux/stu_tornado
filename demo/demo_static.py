@@ -6,7 +6,7 @@ import tornado.httpserver
 import tornado.options
 import os
 
-from tornado.web import RequestHandler, url
+from tornado.web import RequestHandler, url, StaticFileHandler
 from tornado.options import define, options
 
 define("port", default=8000, type=int)
@@ -24,7 +24,6 @@ class IndexHandler(RequestHandler):
         }
         # self.render("index.html", **house_info)
         self.render("index.html", **house_info)
-
 
 class IndexAllHandler(RequestHandler):
 
@@ -70,14 +69,16 @@ class IndexAllHandler(RequestHandler):
 if __name__ == '__main__':
     tornado.options.parse_command_line()
     tornado.options.parse_command_line()
+
     app = tornado.web.Application([
         (r"/", IndexHandler),
         # (r"/all", IndexAllHandler),
         url(r"/all", IndexAllHandler, name='all'),
+        (r"/(.*)", StaticFileHandler, {'path':os.path.join(os.path.dirname(__file__), "../statics/html/")}),
     ],
         static_path=os.path.join(os.path.dirname(__file__), "../static"),
         template_path=os.path.join(os.path.dirname(__file__), "../template"),
-        debug=True
+        debug=False
     )
     http_server = tornado.httpserver.HTTPServer(app)
     http_server.listen(options.port, '0.0.0.0')

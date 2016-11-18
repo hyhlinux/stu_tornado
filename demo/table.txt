@@ -1,0 +1,31 @@
+
+1.  房东: 房子 1:n 
+
+	t1: house:
+			house_id
+			1..面积
+			2..居室
+			3..租金
+			4..fk(user_id)
+
+
+	t2: user:  (房东 和 消费者)
+			user_id
+			1..user_name
+			2..sex
+			3..phone
+
+	order_info:	 用户  房子  订单  评论
+			id 		house_id   user_id  date    
+			001		house_1	   user_1   xxx		
+			002		house_1	   user_1   xxx
+
+
+	house_pic:  房屋: 图片  1:n
+		id,   house_id(fk)	, pic
+		0     house_1		, pic1 
+		1     house_1		, pic2
+		2     house_1		, pic2
+
+
+
