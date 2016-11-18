@@ -1,0 +1,222 @@
+[I 161118 21:46:16 web:1949] 200 GET / (192.168.1.1) 34.52ms
+[I 161118 21:46:16 web:1949] 304 GET /static/js/jquery.min.js (192.168.1.1) 19.85ms
+[W 161118 21:46:16 web:1949] 404 GET /favicon.ico (192.168.1.1) 32.27ms
+[I 161118 21:46:20 web:1949] 200 GET / (192.168.1.1) 5.58ms
+[I 161118 21:46:20 web:1949] 200 GET /static/js/jquery.min.js (192.168.1.1) 13.66ms
+[W 161118 21:46:20 web:1949] 404 GET /favicon.ico (192.168.1.1) 3.19ms
+[I 161118 21:46:24 web:1949] 200 GET / (192.168.1.1) 8.44ms
+[I 161118 21:46:24 web:1949] 200 GET /static/js/jquery.min.js (192.168.1.1) 13.55ms
+[W 161118 21:46:24 web:1949] 404 GET /favicon.ico (192.168.1.1) 2.80ms
+[I 161118 21:46:28 web:1949] 200 GET / (192.168.1.1) 7.91ms
+[I 161118 21:46:28 web:1949] 200 GET /static/js/jquery.min.js (192.168.1.1) 18.90ms
+[W 161118 21:46:28 web:1949] 404 GET /favicon.ico (192.168.1.1) 2.51ms
+[I 161118 22:04:14 web:1949] 200 GET / (127.0.0.1) 3.75ms
+[W 161118 22:04:14 web:1949] 404 GET /favicon.ico (127.0.0.1) 3.87ms
+[I 161118 22:04:25 web:1949] 304 GET / (127.0.0.1) 3.36ms
+[I 161118 22:04:33 web:1949] 304 GET / (192.168.1.1) 3.95ms
+[I 161118 22:04:33 web:1949] 200 GET / (192.168.1.1) 2.50ms
+DebugH:2016-11-18 21:45:40.342913 mod:/home/python/.virtualenvs/tornado_py2/local/lib/python2.7/site-packages/tornado/util.py func:__new__ line:208 
+DebugH:2016-11-18 21:45:40.347432 mod:/home/python/.virtualenvs/tornado_py2/local/lib/python2.7/site-packages/tornado/util.py func:__new__ line:208 
+DebugH:.('HTTPServerRequest.__init__: (arguments)', {})
+DebugH:.('_parse_body:', {})
+DebugH:2016-11-18 21:46:16.627561 mod:/home/python/.virtualenvs/tornado_py2/local/lib/python2.7/site-packages/tornado/web.py func:__init__ line:164 
+DebugH:.('headrs:', <tornado.httputil.HTTPHeaders object at 0x7f5b99526c10>)
+DebugH:.('body:', '')
+DebugH:.('RequestHandler:', {})
+DebugH:.('HTTPServerRequest.__init__: (arguments)', {})
+DebugH:.('_parse_body:', {})
+DebugH:2016-11-18 21:46:16.672683 mod:/home/python/.virtualenvs/tornado_py2/local/lib/python2.7/site-packages/tornado/web.py func:__init__ line:164 
+DebugH:.('headrs:', <tornado.httputil.HTTPHeaders object at 0x7f5b99555b90>)
+DebugH:.('body:', '')
+DebugH:.('RequestHandler:', {'path': '/home/python/github/stu_tornado/stu_websocket/static'})
+DebugH:.('HTTPServerRequest.__init__: (arguments)', {})
+DebugH:.('_parse_body:', {})
+DebugH:2016-11-18 21:46:16.791631 mod:/home/python/.virtualenvs/tornado_py2/local/lib/python2.7/site-packages/tornado/web.py func:__init__ line:164 
+DebugH:.('headrs:', <tornado.httputil.HTTPHeaders object at 0x7f5b99526c10>)
+DebugH:.('body:', '')
+DebugH:.('RequestHandler:', {})
+('open:', set([]))
+DebugH:.('HTTPServerRequest.__init__: (arguments)', {})
+DebugH:.('_parse_body:', {})
+DebugH:2016-11-18 21:46:16.897968 mod:/home/python/.virtualenvs/tornado_py2/local/lib/python2.7/site-packages/tornado/web.py func:__init__ line:164 
+DebugH:.('headrs:', <tornado.httputil.HTTPHeaders object at 0x7f5b995914d0>)
+DebugH:.('body:', '')
+DebugH:.('RequestHandler:', {'path': '/home/python/github/stu_tornado/stu_websocket/static'})
+on_close:
+DebugH:.('HTTPServerRequest.__init__: (arguments)', {})
+DebugH:.('_parse_body:', {})
+DebugH:2016-11-18 21:46:20.808270 mod:/home/python/.virtualenvs/tornado_py2/local/lib/python2.7/site-packages/tornado/web.py func:__init__ line:164 
+DebugH:.('headrs:', <tornado.httputil.HTTPHeaders object at 0x7f5b99463990>)
+DebugH:.('body:', '')
+DebugH:.('RequestHandler:', {})
+('open:', set([]))
+on_close:
+DebugH:.('HTTPServerRequest.__init__: (arguments)', {})
+DebugH:.('_parse_body:', {})
+DebugH:2016-11-18 21:46:24.483592 mod:/home/python/.virtualenvs/tornado_py2/local/lib/python2.7/site-packages/tornado/web.py func:__init__ line:164 
+DebugH:.('headrs:', <tornado.httputil.HTTPHeaders object at 0x7f5b99463c10>)
+DebugH:.('body:', '')
+DebugH:.('RequestHandler:', {})
+('open:', set([]))
+on_close:
+DebugH:.('HTTPServerRequest.__init__: (arguments)', {})
+DebugH:.('_parse_body:', {})
+DebugH:2016-11-18 21:46:28.501173 mod:/home/python/.virtualenvs/tornado_py2/local/lib/python2.7/site-packages/tornado/web.py func:__init__ line:164 
+DebugH:.('headrs:', <tornado.httputil.HTTPHeaders object at 0x7f5b99470d50>)
+DebugH:.('body:', '')
+DebugH:.('RequestHandler:', {})
+('open:', set([]))
+on_close:
+DebugH:.('HTTPServerRequest.__init__: (arguments)', {})
+DebugH:.('_parse_body:', {})
+DebugH:2016-11-18 22:04:14.237564 mod:/home/python/.virtualenvs/tornado_py2/local/lib/python2.7/site-packages/tornado/web.py func:__init__ line:164 
+DebugH:.('headrs:', <tornado.httputil.HTTPHeaders object at 0x7f5b9947e050>)
+DebugH:.('body:', '')
+DebugH:.('RequestHandler:', {})
+('open:', set([]))
+DebugH:.('HTTPServerRequest.__init__: (arguments)', {})
+DebugH:.('_parse_body:', {})
+DebugH:2016-11-18 22:04:25.154415 mod:/home/python/.virtualenvs/tornado_py2/local/lib/python2.7/site-packages/tornado/web.py func:__init__ line:164 
+DebugH:.('headrs:', <tornado.httputil.HTTPHeaders object at 0x7f5b9947e550>)
+DebugH:.('body:', '')
+DebugH:.('RequestHandler:', {})
+('open:', set([<__main__.ChatHandler object at 0x7f5b9947e210>]))
+on_close:
+DebugH:.('HTTPServerRequest.__init__: (arguments)', {})
+DebugH:.('_parse_body:', {})
+DebugH:2016-11-18 22:04:33.648993 mod:/home/python/.virtualenvs/tornado_py2/local/lib/python2[I 161118 22:04:43 web:1949] 304 GET / (127.0.0.1) 2.55ms
+[I 161118 22:05:09 web:1949] 304 GET / (192.168.1.1) 3.33ms
+[I 161118 22:05:09 web:1949] 304 GET /static/js/jquery.min.js (192.168.1.1) 2.25ms
+[I 161118 22:09:00 web:1949] 304 GET / (127.0.0.1) 3.85ms
+DebugH:2016-11-18 21:45:40.329061 mod:/home/python/.virtualenvs/tornado_py2/local/lib/python2.7/site-packages/tornado/util.py func:__new__ line:208 
+DebugH:2016-11-18 21:45:40.329521 mod:/home/python/.virtualenvs/tornado_py2/local/lib/python2.7/site-packages/tornado/util.py func:__new__ line:208 
+DebugH:.('HTTPServerRequest.__init__: (arguments)', {})
+DebugH:.('_parse_body:', {})
+DebugH:2016-11-18 21:46:20.708005 mod:/home/python/.virtualenvs/tornado_py2/local/lib/python2.7/site-packages/tornado/web.py func:__init__ line:164 
+DebugH:.('headrs:', <tornado.httputil.HTTPHeaders object at 0x7fa60d5757d0>)
+DebugH:.('body:', '')
+DebugH:.('RequestHandler:', {})
+DebugH:.('HTTPServerRequest.__init__: (arguments)', {})
+DebugH:.('_parse_body:', {})
+DebugH:2016-11-18 21:46:20.718957 mod:/home/python/.virtualenvs/tornado_py2/local/lib/python2.7/site-packages/tornado/web.py func:__init__ line:164 
+DebugH:.('headrs:', <tornado.httputil.HTTPHeaders object at 0x7fa60d52b750>)
+DebugH:.('body:', '')
+DebugH:.('RequestHandler:', {'path': '/home/python/github/stu_tornado/stu_websocket/static'})
+DebugH:.('HTTPServerRequest.__init__: (arguments)', {})
+DebugH:.('_parse_body:', {})
+DebugH:2016-11-18 21:46:20.884444 mod:/home/python/.virtualenvs/tornado_py2/local/lib/python2.7/site-packages/tornado/web.py func:__init__ line:164 
+DebugH:.('headrs:', <tornado.httputil.HTTPHeaders object at 0x7fa60e6149d0>)
+DebugH:.('body:', '')
+DebugH:.('RequestHandler:', {'path': '/home/python/github/stu_tornado/stu_websocket/static'})
+DebugH:.('HTTPServerRequest.__init__: (arguments)', {})
+DebugH:.('_parse_body:', {})
+DebugH:2016-11-18 22:04:14.038548 mod:/home/python/.virtualenvs/tornado_py2/local/lib/python2.7/site-packages/tornado/web.py func:__init__ line:164 
+DebugH:.('headrs:', <tornado.httputil.HTTPHeaders object at 0x7fa60d4b8a90>)
+DebugH:.('body:', '')
+DebugH:.('RequestHandler:', {})
+DebugH:.('HTTPServerRequest.__init__: (arguments)', {})
+DebugH:.('_parse_body:', {})
+DebugH:2016-11-18 22:04:33.556845 mod:/home/python/.virtualenvs/tornado_py2/local/lib/python2.7/site-packages/tornado/web.py func:__init__ line:164 
+DebugH:.('headrs:', <tornado.httputil.HTTPHeaders object at 0x7fa60d4e9550>)
+DebugH:.('body:', '')
+DebugH:.('RequestHandler:', {})
+DebugH:.('HTTPServerRequest.__init__: (arguments)', {})
+DebugH:.('_parse_body:', {})
+DebugH:2016-11-18 22:04:33.565650 mod:/home/python/.virtualenvs/tornado_py2/local/lib/python2.7/site-packages/tornado/web.py func:__init__ line:164 
+DebugH:.('headrs:', <tornado.httputil.HTTPHeaders object at 0x7fa60d4b9e50>)
+DebugH:.('body:', '')
+DebugH:.('RequestHandler:', {})
+DebugH:.('HTTPServerRequest.__init__: (arguments)', {})
+DebugH:.('_parse_body:', {})
+DebugH:2016-11-18 22:04:43.652477 mod:/home/python/.virtualenvs/tornado_py2/local/lib/python2.7/site-packages/tornado/web.py func:__init__ line:164 
+DebugH:.('headrs:', <tornado.httputil.HTTPHeaders object at 0x7fa60d575590>)
+DebugH:.('body:', '')
+DebugH:.('RequestHandler:', {})
+DebugH:.('HTTPServerRequest.__init__: (arguments)', {})
+DebugH:.('_parse_body:', {})
+DebugH:2016-11-18 22:05:09.617419 mod:/home/python/.virtualenvs/tornado_py2/local/lib/python2.7/site-packages/tornado/web.py func:__init__ line:164 
+DebugH:.('headrs:', <tornado.httputil.HTTPHeaders object at 0x7fa60d4a3290>)
+DebugH:.('body:', '')
+DebugH:.('RequestHandler:', {})
+DebugH:.('HTTPServerRequest.__init__: (arguments)', {})
+DebugH:.('_parse_body:', {})
+DebugH:2016-11-18 22:05:09.637366 mod:/home/python/.virtualenvs/tornado_py2/local/lib/python2.7/site-packages/tornado/web.py func:__init__ line:164 
+DebugH:.('headrs:', <tornado.httputil.HTTPHeaders object at 0x7fa60d4a38d0>)
+DebugH:.('body:', '')
+DebugH:.('RequestHandler:', {'path': '/home/python/github/stu_tornado/stu_websocket/static'})
+DebugH:.('HTTPServerRequest.__init__: (arguments)', {})
+DebugH:.('_parse_body:', {})
+DebugH:2016-11-18 22:10:13.512757 mod:/home/python/.virtualenvs/tornado_py2/local/lib/python2.7/site-packages/tornado/web.py func:__init__ line:164 
+DebugH:.('headrs:', <tornado.httputil.HTTPHeaders object at 0x7fa60d4b9250>)
+DebugH:.('body:'[I 161118 22:10:13 web:1949] 304 GET / (127.0.0.1) 4.52ms
+[I 161118 22:11:59 web:1949] 304 GET / (127.0.0.1) 2.33ms
+[I 161118 22:12:06 web:1949] 200 GET / (127.0.0.1) 2.16ms
+[I 161118 22:12:10 web:1949] 304 GET / (127.0.0.1) 2.18ms
+[I 161118 22:12:17 web:1949] 304 GET / (127.0.0.1) 5.68ms
+.7/site-packages/tornado/web.py func:__init__ line:164 
+DebugH:.('headrs:', <tornado.httputil.HTTPHeaders object at 0x7f5b9947e690>)
+DebugH:.('body:', '')
+DebugH:.('RequestHandler:', {})
+('open:', set([<__main__.ChatHandler object at 0x7f5b9947e210>]))
+DebugH:.('HTTPServerRequest.__init__: (arguments)', {})
+DebugH:.('_parse_body:', {})
+DebugH:2016-11-18 22:04:43.683785 mod:/home/python/.virtualenvs/tornado_py2/local/lib/python2.7/site-packages/tornado/web.py func:__init__ line:164 
+DebugH:.('headrs:', <tornado.httputil.HTTPHeaders object at 0x7f5b9947eb50>)
+DebugH:.('body:', '')
+DebugH:.('RequestHandler:', {})
+('open:', set([<__main__.ChatHandler object at 0x7f5b9947e210>, <__main__.ChatHandler object at 0x7f5b9947e4d0>]))
+on_close:
+DebugH:.('HTTPServerRequest.__init__: (arguments)', {})
+DebugH:.('_parse_body:', {})
+DebugH:2016-11-18 22:05:09.708520 mod:/home/python/.virtualenvs/tornado_py2/local/lib/python2.7/site-packages/tornado/web.py func:__init__ line:164 
+DebugH:.('headrs:', <tornado.httputil.HTTPHeaders object at 0x7f5b9947edd0>)
+DebugH:.('body:', '')
+DebugH:.('RequestHandler:', {})
+('open:', set([<__main__.ChatHandler object at 0x7f5b9947e210>, <__main__.ChatHandler object at 0x7f5b9947ea50>]))
+on_close:
+DebugH:.('HTTPServerRequest.__init__: (arguments)', {})
+DebugH:.('_parse_body:', {})
+DebugH:2016-11-18 22:09:00.576149 mod:/home/python/.virtualenvs/tornado_py2/local/lib/python2.7/site-packages/tornado/web.py func:__init__ line:164 
+DebugH:.('headrs:', <tornado.httputil.HTTPHeaders object at 0x7f5b9947ebd0>)
+DebugH:.('body:', '')
+DebugH:.('RequestHandler:', {})
+('open:', set([<__main__.ChatHandler object at 0x7f5b9947e210>, <__main__.ChatHandler object at 0x7f5b9947ea90>]))
+on_close:
+DebugH:.('HTTPServerRequest.__init__: (arguments)', {})
+DebugH:.('_parse_body:', {})
+DebugH:2016-11-18 22:10:13.634108 mod:/home/python/.virtualenvs/tornado_py2/local/lib/python2.7/site-packages/tornado/web.py func:__init__ line:164 
+DebugH:.('headrs:', <tornado.httputil.HTTPHeaders object at 0x7f5b9947e810>)
+DebugH:.('body:', '')
+DebugH:.('RequestHandler:', {})
+('open:', set([<__main__.ChatHandler object at 0x7f5b9947e210>, <__main__.ChatHandler object at 0x7f5b9947ea90>]))
+on_close:
+DebugH:.('HTTPServerRequest.__init__: (arguments)', {})
+DebugH:.('_parse_body:', {})
+DebugH:2016-11-18 22:12:00.021495 mod:/home/python/.virtualenvs/tornado_py2/local/lib/python2.7/site-packages/tornado/web.py func:__init__ line:164 
+DebugH:.('headrs:', <tornado.httputil.HTTPHeaders object at 0x7f5b9947e550>)
+DebugH:.('body:', '')
+DebugH:.('RequestHandler:', {})
+('open:', set([<__main__.ChatHandler object at 0x7f5b9947e210>, <__main__.ChatHandler object at 0x7f5b9947ea90>]))
+on_close:
+DebugH:.('HTTPServerRequest.__init__: (arguments)', {})
+DebugH:.('_parse_body:', {})
+DebugH:2016-11-18 22:12:06.739756 mod:/home/python/.virtualenvs/tornado_py2/local/lib/python2.7/site-packages/tornado/web.py func:__init__ line:164 
+DebugH:.('headrs:', <tornado.httputil.HTTPHeaders object at 0x7f5b99470ed0>)
+DebugH:.('body:', '')
+DebugH:.('RequestHandler:', {})
+('open:', set([<__main__.ChatHandler object at 0x7f5b9947e210>, <__main__.ChatHandler object at 0x7f5b9947ea90>]))
+on_close:
+DebugH:.('HTTPServerRequest.__init__: (arguments)', {})
+DebugH:.('_parse_body:', {})
+DebugH:2016-11-18 22:12:10.901085 mod:/home/python/.virtualenvs/tornado_py2/local/lib/python2.7/site-packages/tornado/web.py func:__init__ line:164 
+DebugH:.('headrs:', <tornado.httputil.HTTPHeaders object at 0x7f5b995268d0>)
+DebugH:.('body:', '')
+DebugH:.('RequestHandler:', {})
+('open:', set([<__main__.ChatHandler object at 0x7f5b9947e210>, <__main__.ChatHandler object at 0x7f5b9947ea90>]))
+DebugH:.('HTTPServerRequest.__init__: (arguments)', {})
+DebugH:.('_parse_body:', {})
+DebugH:2016-11-18 22:12:18.067862 mod:/home/python/.virtualenvs/tornado_py2/local/lib/python2.7/site-packages/tornado/web.py func:__init__ line:164 
+DebugH:.('headrs:', <tornado.httputil.HTTPHeaders object at 0x7f5b99526450>)
+DebugH:.('body:', '')
+DebugH:.('RequestHandler:', {})
+('open:', set([<__main__.ChatHandler object at 0x7f5b9947e
